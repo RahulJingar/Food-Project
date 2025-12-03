@@ -36,7 +36,6 @@ const Profile = () => {
             <p className="text-lg break-all">{user.email}</p>
           </div>
 
-          {/* Extra fields chahe to yahan add karo */}
           {user.phone && (
             <div>
               <label className="block text-sm font-semibold mb-1">Phone:</label>

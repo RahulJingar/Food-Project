@@ -1,12 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  items: {},          // live cart: { itemId: { item, qty } }
+  items: {},
   totalItems: 0,
   totalAmount: 0,
   restaurantName: "",
-  // snapshot of last placed order
-  // { items, totalAmount, restaurantName, placedAt, etaMinutes }
   lastOrder: null,
 };
 
@@ -64,7 +62,6 @@ const cartSlice = createSlice({
       state.totalItems = totalItems;
       state.totalAmount = totalAmount;
     },
-    // payload: { items, totalAmount, restaurantName, placedAt, etaMinutes }
     saveLastOrder(state, action) {
       state.lastOrder = action.payload;
     },
@@ -73,6 +70,9 @@ const cartSlice = createSlice({
       state.totalItems = 0;
       state.totalAmount = 0;
       state.restaurantName = "";
+    },
+    clearLastOrder(state) {
+      state.lastOrder = null;
     },
   },
 });
@@ -84,6 +84,7 @@ export const {
   decrementItem,
   saveLastOrder,
   clearCart,
+  clearLastOrder,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

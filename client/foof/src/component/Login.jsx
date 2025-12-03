@@ -20,7 +20,6 @@ const Login = () => {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
       setMessage("Login Successful!");
 
-      // Redirect after short delay
       setTimeout(() => {
         navigate("/dashboard");
       }, 1000);

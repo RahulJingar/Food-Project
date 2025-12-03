@@ -42,7 +42,6 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center space-x-6">
-          {/* Cart Icon */}
           <button
             onClick={() => navigate("/cart")}
             aria-label="Cart"
@@ -66,7 +65,6 @@ const Navbar = () => {
             )}
           </button>
 
-          {/* Profile */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
