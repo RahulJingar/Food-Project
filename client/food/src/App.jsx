@@ -54,6 +54,7 @@ import ProtectedRoute from "./component/ProtectedRoute";
 import { store } from "./app/store";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./component/Footer";
 
 const App = () => {
   return (
@@ -73,6 +74,7 @@ const App = () => {
 
           <Route path="*" element={<p>Page not found</p>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </Provider>
   );
