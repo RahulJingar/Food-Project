@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchRestaurants = createAsyncThunk('restaurants/fetchRestaurants', async () => {
-  const response = await fetch('http://127.0.0.1:2525/restaurants');
+  const response = await fetch('https://food-project-1-bnqy.onrender.com/restaurants');
   if (!response.ok) {
     throw new Error('Failed to fetch restaurants');
   }
