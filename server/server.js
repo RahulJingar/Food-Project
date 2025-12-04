@@ -8,7 +8,7 @@ const port = 2525;
 app.use(express.json());
 app.use(cors());
 
-const mongoURL = "mongodb+srv://username:password@cluster0.w9wxj.mongodb.net/foodwebsite?retryWrites=true&w=majority";
+const mongoURL = "mongodb+srv://rahul:1234@cluster0.w9wxj.mongodb.net/foodwebsite?retryWrites=true&w=majority";
 
 mongoose
   .connect(mongoURL)
